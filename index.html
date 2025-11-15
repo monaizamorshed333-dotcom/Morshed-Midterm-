@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>School Portal Login</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      width: 320px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: none;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background-color: #4a90e2;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .error {
+      color: #ff4d4d;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+
+  <script>
+    function login() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      if (email === "monaizamorshed333@gmail.com" && password === "333moon333") {
+        window.location.href = "midterm.html";
+      } else {
+        document.getElementById("error").style.display = "block";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="box">
+    <h2>Student Login</h2>
+
+    <input id="email" type="text" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <div id="error" class="error">Incorrect email or password.</div>
+  </div>
+</body>
+</html>
